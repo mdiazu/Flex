@@ -1,0 +1,68 @@
+body{
+    background-color: white;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.container{
+    margin: auto;
+    background-color: lightgray;
+    width: 800px;
+    padding: 0;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.slider{
+    position: relative;
+    width: 800px;
+    height: 300px;
+}
+
+/* overlapped */
+ul.slider li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: white;
+    /* specifies that a property should inherit its value from its parent element (From ul.slider) */
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+
+ul.slider li img{
+    width: 800px;
+    height: 300px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child{
+    opacity: 1;
+}
+ul.slider li:target{
+    opacity: 1;
+}
+.menu{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: gray;
+    padding: 5px;
+    width: 1px;
+    border-radius: 100%;
+}
